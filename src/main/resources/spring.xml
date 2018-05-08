@@ -5,10 +5,10 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-    <bean id="knight" class="springinAction.chapter1.BraveKnight">
+    <bean id="knight" class="com.example.lijie.testSpring.springinAction.chapter1.BraveKnight">
         <constructor-arg ref="quest"/>
     </bean>
-    <bean id="quest" class="springinAction.chapter1.SlayDragonQuest">
+    <bean id="quest" class="com.example.lijie.testSpring.springinAction.chapter1.SlayDragonQuest">
         <!--<constructor-arg ref="#{System.out}"/>-->
     </bean>
 

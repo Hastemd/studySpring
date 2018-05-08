@@ -1,7 +1,7 @@
 /**
  * Created by lijie on 2017/9/22.
  */
-package spring.test.aop;
+package com.example.lijie.testSpring.spring.test.aop;
 
 import org.junit.Test;
 import org.springframework.aop.BeforeAdvice;

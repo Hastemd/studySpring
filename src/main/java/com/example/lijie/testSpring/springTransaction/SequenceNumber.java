@@ -1,7 +1,7 @@
 /**
  * Created by lijie on 2017/10/13.
  */
-package springTransaction;
+package com.example.lijie.testSpring.springTransaction;
 
 /**
  * auther lijie  2017/10/13.

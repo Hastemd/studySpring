@@ -1,9 +1,7 @@
 /**
  * Created by lijie on 2017/7/24.
  */
-package springinAction.chapter1;
-
-import java.io.PrintStream;
+package com.example.lijie.testSpring.springinAction.chapter1;
 
 /**
  * auther lijie  2017/7/24.

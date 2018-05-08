@@ -1,7 +1,7 @@
 /**
  * Created by lijie on 2017/7/24.
  */
-package springinAction.chapter1;
+package com.example.lijie.testSpring.springinAction.chapter1;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
