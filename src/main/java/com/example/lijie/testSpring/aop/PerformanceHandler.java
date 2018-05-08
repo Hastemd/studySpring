@@ -1,10 +1,7 @@
 /**
  * Created by lijie on 2017/9/21.
  */
-package aop;
-
-import org.aopalliance.intercept.Invocation;
-import org.junit.Test;
+package com.example.lijie.testSpring.aop;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

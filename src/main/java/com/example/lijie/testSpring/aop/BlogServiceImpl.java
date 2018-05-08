@@ -1,13 +1,11 @@
 /**
  * Created by lijie on 2017/9/21.
  */
-package aop;
+package com.example.lijie.testSpring.aop;
 
 import org.junit.Test;
 
-import java.lang.annotation.Target;
 import java.lang.reflect.Proxy;
-import java.util.logging.Handler;
 
 /**
  * auther lijie  2017/9/21.
@@ -15,7 +13,7 @@ import java.util.logging.Handler;
 public class BlogServiceImpl implements IBlogService{
 
     public void removeTopic(int topicId){
-        //PerformanceMonitor.begin("aop.removeTopic.removeTopic");
+        //PerformanceMonitor.begin("com.example.lijie.testSpring.aop.removeTopic.removeTopic");
         System.out.println("模拟删除Topic记录: " + topicId);
         try {
             Thread.currentThread().sleep(20);
@@ -27,7 +25,7 @@ public class BlogServiceImpl implements IBlogService{
     }
 
     public void removeForum(int forumId){
-        //PerformanceMonitor.begin("aop.removeTopic.removeForum");
+        //PerformanceMonitor.begin("com.example.lijie.testSpring.aop.removeTopic.removeForum");
         System.out.println("模拟删除forum记录: " + forumId);
         try {
             Thread.currentThread().sleep(20);
