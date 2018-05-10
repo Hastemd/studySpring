@@ -4,6 +4,7 @@ import com.example.lijie.config.interceptor.LoginInterceptor;
 import com.example.lijie.config.interceptor.SignInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
@@ -11,6 +12,7 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import java.util.concurrent.ThreadPoolExecutor;
 
 @Configuration
+@ComponentScan({"com.example.lijie.service"})
 public class ApplicationConfig {
     @Autowired
     private Environment env;
