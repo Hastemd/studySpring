@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+    <!-- 纯用注解配置bean的情况下context:annotation-config可以省略，当混合使用xml和注解配置bean的时候就不能省略了-->
+   <!-- <context:annotation-config></context:annotation-config>-->
+    <!-- 配置扫描注解的包 -->
+    <!-- <context:component-scan base-package="com.js"></context:component-scan> -->
+    <!--<bean id="customerDao" class="com.js.demo4.CustomerDao"></bean>
+    <bean id="customerService" class="com.js.demo4.CustomerService">
+        <property name="customerDao" ref="customerDao"></property>
+        <property name="orderDao" ref="orderDao"></property>
+    </bean>
+    <bean id="orderDao" class="com.js.demo4.OrderDao"></bean>-->
+
+    <bean id = "myBean" class = "com.example.lijie.springSource.MyBean"></bean>
+</beans>

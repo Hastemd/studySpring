@@ -3,10 +3,10 @@
  */
 package com.example.lijie.web;
 
+import com.example.lijie.service.TestService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.context.ContextLoader;
-import org.springframework.web.context.WebApplicationContext;
 
 /**
  * auther lijie  2017/6/18.
@@ -15,13 +15,17 @@ import org.springframework.web.context.WebApplicationContext;
 @RequestMapping("/hello")
 public class HelloController {
 
+    @Autowired
+    private TestService testService;
+
     @RequestMapping("/sayHello")
     public String sayHello(){
         System.out.println("nihao!");
 
-        WebApplicationContext wac = ContextLoader.getCurrentWebApplicationContext();
-        Object testService = wac.getBean("testService");
-        System.out.println(testService);
+        //WebApplicationContext wac = ContextLoader.getCurrentWebApplicationContext();
+        //Object testService = wac.getBean("testService");
+        //System.out.println(testService);
+        testService.canTransaction();
 
         return "resultPage";
     }
