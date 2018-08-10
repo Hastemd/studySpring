@@ -1,11 +1,9 @@
 package com.example.lijie.springSource;
 
-import org.junit.Assert;
+import junit.framework.Assert;
 import org.junit.Test;
-import org.springframework.beans.factory.BeanFactory;
-import org.springframework.beans.factory.xml.XmlBeanFactory;
-import org.springframework.core.io.ClassPathResource;
-import org.springframework.core.io.Resource;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class MyBeanTest {
 
@@ -16,10 +14,14 @@ public class MyBeanTest {
      */
     @Test
     public void getTestStr() {
-        Resource resource = new ClassPathResource("applicationContext.xml");
-        BeanFactory bf = new XmlBeanFactory(resource);
-        //BeanFactory bf = XmlBeanFactory(new ClassPathResource("applicationContext.xml"));
-        MyBean myBean = (MyBean)bf.getBean("myBean");
+        //Resource resource = new ClassPathResource("applicationContext.xml");
+        //BeanFactory bf = new XmlBeanFactory(resource);
+        ////BeanFactory bf = XmlBeanFactory(new ClassPathResource("applicationContext.xml"));
+        //MyBean myBean = (MyBean)bf.getBean("myBean");
+        //Assert.assertEquals("testStr",myBean.getTestStr());
+        
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
+        MyBean myBean = (MyBean)applicationContext.getBean("myBean");
         Assert.assertEquals("testStr",myBean.getTestStr());
     }
 }
