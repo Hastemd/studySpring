@@ -1,4 +1,4 @@
-package com.example.lijie.IOTest;
+package basic.IOTest;
 
 import java.io.Console;
 import java.io.IOException;

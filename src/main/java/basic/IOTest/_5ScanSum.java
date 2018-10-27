@@ -1,4 +1,4 @@
-package com.example.lijie.IOTest;
+package basic.IOTest;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
