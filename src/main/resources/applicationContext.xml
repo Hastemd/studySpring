@@ -16,5 +16,5 @@ http://www.springframework.org/schema/context http://www.springframework.org/sch
     </bean>
     <bean id="orderDao" class="com.js.demo4.OrderDao"></bean>-->
 
-    <bean id = "myBean" class = "com.example.lijie.springSource.MyBean"></bean>
+    <bean id = "myTestBean" class = "basic.springSourceCode.MyTestBean"></bean>
 </beans>

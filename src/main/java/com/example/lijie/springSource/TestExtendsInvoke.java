@@ -7,10 +7,10 @@ package com.example.lijie.springSource;
  */
 public class TestExtendsInvoke extends B{
 
-    @Override
-    public void sayHello(){
-        System.out.println("TestExtendsInvoke");
-    }
+    //@Override
+    //public void sayHello(){
+    //    System.out.println("TestExtendsInvoke");
+    //}
 
     public void sayHi(){
         System.out.println("nihao Test");
