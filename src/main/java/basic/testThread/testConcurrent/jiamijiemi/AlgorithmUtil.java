@@ -69,7 +69,8 @@ public class AlgorithmUtil {
 		receivePhone = AlgorithmUtil.encode(receivePhone);
 		receivePhone = "ANE_" + receivePhone;
 		System.out.println(receivePhone);
-
+		String deTel = decode(receivePhone);
+		System.out.println("解密: " + deTel + ",长度" + deTel.length());
 	}
 
 }
