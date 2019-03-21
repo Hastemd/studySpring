@@ -24,7 +24,7 @@ public class MainConfig {
 
     @Bean("person")
     public Person person1(){
-        return new Person("iris", 18);
+        return new Person(18);
     }
 
 }

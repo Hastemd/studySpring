@@ -13,6 +13,7 @@ public class MainTest {
         AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(MainConfig.class);
         Person bean = applicationContext.getBean(Person.class);
         System.out.println(bean);
+        System.out.println(bean.getName());
 
         String[] beanNamesForType = applicationContext.getBeanNamesForType(Person.class);
         for(String name : beanNamesForType){

@@ -1,11 +1,19 @@
 package com.example.lijie.studySpringAnnotation.bean;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.stereotype.Component;
+
 /**
  * auther lijie  2019/1/25.
  */
+@PropertySource("classpath:application.properties")
+@Component
 public class Person {
 
+    @Value("${person.name}")
     private String name;
+
     private Integer age;
 
     public String getName() {
@@ -26,6 +34,10 @@ public class Person {
 
     public Person(String name, Integer age) {
         this.name = name;
+        this.age = age;
+    }
+
+    public Person(Integer age) {
         this.age = age;
     }
 
