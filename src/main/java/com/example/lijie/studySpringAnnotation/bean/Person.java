@@ -38,10 +38,12 @@ public class Person {
     }
 
     public Person(Integer age) {
+        System.out.println("调用有参构造方法 : Person(Integer age)");
         this.age = age;
     }
 
     public Person() {
+        System.out.println("调用无参构造方法...");
     }
 
     @Override
