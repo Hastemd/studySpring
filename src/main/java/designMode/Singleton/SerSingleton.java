@@ -51,6 +51,9 @@ public class SerSingleton implements Serializable {
         System.out.println(s);
         System.out.println(sRead);
         System.out.println("序列化后读取其中的内容："+sRead.getContent());
+        /*
+        任何一个readObject方法，不管是显式的还是默认的，它都会返回一个新建的实例，这个新建的实例不同于该类初始化时创建的实例。
+        */
         System.out.println("序列化前后两个是否同一个："+(s==sRead));
     }
 }
