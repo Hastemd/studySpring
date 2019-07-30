@@ -43,7 +43,7 @@ public class RAMJobTest {
 
         //6.启动 调度器
         scheduler.start();
-        log.info("启动时间 ： " + new Date());
+        //log.info("启动时间 ： " + new Date());
 
     }
 
