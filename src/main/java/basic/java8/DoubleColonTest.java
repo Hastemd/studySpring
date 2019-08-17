@@ -34,7 +34,10 @@ public class DoubleColonTest {
         list.add("gdfdsf");
         list.add("adfaf");
         ArrayList<String> collect1 = list.stream().map(String::toUpperCase).collect(Collectors.toCollection(ArrayList::new));
+        ArrayList<String> collect2 = list.stream().map(String::toUpperCase).collect(Collectors.toCollection(() -> new ArrayList<>()));
         collect1.forEach(System.out::println);
+        System.out.println(collect1);
+        System.out.println(collect2);
     }
 
 }
