@@ -2,7 +2,9 @@ package basic.java8;
 
 
 import java.util.*;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * 在Java 8中,集合接口有两个方法来生成流：
@@ -15,11 +17,32 @@ import java.util.stream.Collectors;
 public class StreamTest {
     public static void main(String[] args) {
         List<String> stringList = Arrays.asList("a","b","c","abc","","hafa","adf");
-        List<String> filtered = stringList.stream().filter(string -> !string.isEmpty()).collect(Collectors.toList());
+        List<String> filtered = stringList.
+                stream().
+                filter(string -> !string.isEmpty()).
+                collect(Collectors.toList());
         filtered.forEach(System.out::print);
         System.out.println("-----------");
+        int a = 1;
+        int b = 2;
+        int c = 3;
+        System.out.println("s" + a + b+ c);
+        System.out.println("s" + (a + b+ c));
 
-        List<String> filtered1 = stringList.stream().filter(string -> string.length() == 1).collect(Collectors.toList());
+        Stream<String> personStream1 = stringList.stream().filter(new Predicate<String>() {
+            @Override
+            public boolean test(String str) {
+                return "a".equals(str);
+            }
+        });
+
+        Stream<String> personStream = stringList.stream().filter(str -> "a".equals(str));
+        List<String> stringList1 = personStream.collect(Collectors.toList());//将Stream转化为List
+        System.out.println("stringList1 : " + stringList1.toString());//查看结果
+        System.out.println("stringList : " + stringList.toString());//查看结果
+        System.out.println("test : " + stringList.toString());//查看结果
+
+        List<String> filtered1 = stringList.stream().filter((string) -> string.length() == 1).collect(Collectors.toList());
         filtered1.forEach(System.out::print);
         System.out.println("-----------");
 
@@ -79,7 +102,6 @@ public class StreamTest {
                 .filter(e -> e%2 ==0)
                 .collect( Collectors.groupingBy(p->p, Collectors.summingInt(p->1)) );
         System.out.println("primaryOccurrence result is: " + r);
-
 
     }
 }
