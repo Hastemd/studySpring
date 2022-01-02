@@ -21,6 +21,7 @@ public class StreamTest {
                 stream().
                 filter(string -> !string.isEmpty()).
                 collect(Collectors.toList());
+        System.out.println(filtered);
         filtered.forEach(System.out::print);
         System.out.println("-----------");
         int a = 1;
@@ -29,6 +30,7 @@ public class StreamTest {
         System.out.println("s" + a + b+ c);
         System.out.println("s" + (a + b+ c));
 
+        // 完整的写法
         Stream<String> personStream1 = stringList.stream().filter(new Predicate<String>() {
             @Override
             public boolean test(String str) {

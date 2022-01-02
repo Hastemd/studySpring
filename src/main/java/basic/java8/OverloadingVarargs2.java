@@ -4,6 +4,7 @@ public class OverloadingVarargs2 {
     static void f(float i, Character... args) {
         System.out.println("first");
         System.out.println(i);
+        System.out.println(args);
     }
 
     //static void f(Character... args) {
