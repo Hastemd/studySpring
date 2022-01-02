@@ -47,5 +47,7 @@ public class TestFunction {
         Integer apply = compose.apply(3);
         System.out.println(apply);
         System.out.println(func1.compose(func2).apply(3));
+
+
     }
 }

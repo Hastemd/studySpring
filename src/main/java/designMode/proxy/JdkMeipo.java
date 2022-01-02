@@ -19,6 +19,7 @@ public class JdkMeipo implements InvocationHandler {
 
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         before();
+        System.out.println("调用法法为: " + method);
         Object result = method.invoke(this.target,args);
         after();
         return result;
