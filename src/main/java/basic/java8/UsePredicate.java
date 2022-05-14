@@ -19,7 +19,8 @@ import java.util.stream.Stream;
 @Slf4j
 public class UsePredicate {
     public static void main(String[] args) {
-        List<Person> collect = Stream.of(new Person("irisha", 18), new Person("hastemd", 20)).collect(Collectors.toList());
+        List<Person> collect = Stream.of(new Person("irisha", 18),
+                new Person("hastemd", 20)).collect(Collectors.toList());
 
         List<Person> collect1 = collect.stream()
                 .filter(a -> a.getAge() > 16)
